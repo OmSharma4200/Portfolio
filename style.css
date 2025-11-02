@@ -1,0 +1,300 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #aaa;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+#hero {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,1)), 
+              url("/realwaste/images/dmitry-khotsinskiy-Lg7a7JD4Pls-unsplash.jpg") center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #fff;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #aaa;
+}
+
+/* Projects */
+#projects {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;              /* 👈 Fixed height for all images */
+  object-fit: cover;          /* 👈 Ensures images fill the area without distortion */
+  display: block;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* About */
+#about {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+#about p {
+  line-height: 1.8;
+}
+
+/* Contact */
+#contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem auto 0;
+}
+
+input, textarea {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #aaa;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    text-align: right;
+    padding: 1rem;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+/* About section layout */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Text styling */
+.about-text {
+  flex: 1;
+}
+
+/* Circular image styling */
+.about-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: stack on top for mobile */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+}
+
+/* futuristicvehicle */
+/* Project Detail Page */
+#project-detail {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+#project-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-desc {
+  margin-bottom: 2rem;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+/* Gallery grid for desktop */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.back-btn {
+  margin-top: 3rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
